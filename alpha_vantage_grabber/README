@@ -1,0 +1,7 @@
+ 
+create a config.py file and follow the below format,
+
+class config:
+
+	aplha_vantage_grabber_key = '0124j1qj'
+	key2 = 'blah'
