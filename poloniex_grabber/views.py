@@ -37,3 +37,5 @@ starttime=time.time()
 while True:
 	grab_ticker_data()
 	time.sleep(1.0 - ((time.time() - starttime) % 1.0))
+
+

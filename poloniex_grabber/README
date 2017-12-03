@@ -5,3 +5,5 @@ class config:
 
 	data_storage = '/mnt/DataWhore/automate_data/poloniex_'
 	project_path = "/home/drfrink/Documents/devProjects/automate_data"
+
+also edit supervisor_start.sh if using supervisor

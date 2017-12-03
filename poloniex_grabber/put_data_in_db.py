@@ -27,9 +27,14 @@ from poloniex_grabber.models import *
 
 #TODO:
 #Loop each file except todays
+#Set up data file comparison between linobox and desktop
 #datetime_object = datetime.strptime(row_date, "%Y/%m/%d-%H:%M:%S")
 #Push data into DB
-#
+#Move files into archive
+
+#IDEAS:
+#Build graph with raw sql adder for other lines
+#keep copies of sqls for later implementation
 
 ###
 #PoloniexCoinPairDataRaw.objects.create(coin_pair=data_coin_pair,
