@@ -3,6 +3,7 @@ from datetime import datetime
 import sys
 import csv
 import traceback
+from config import config
 
 def __setup_django(root_path, settings):
     import os
@@ -16,7 +17,7 @@ def __setup_django(root_path, settings):
 
     django.setup()
 
-PROJECT_PATH = "/home/drfrink/Documents/devProjects/automate_data"
+PROJECT_PATH = config.project_path
 PROJECT_SETTINGS = "automate.settings"
 
 __setup_django(PROJECT_PATH,PROJECT_SETTINGS)
