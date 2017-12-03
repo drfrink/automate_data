@@ -3,25 +3,7 @@ from datetime import datetime
 import sys
 import csv
 import traceback
-
-def __setup_django(root_path, settings):
-    import os
-    import django
-
-    os.chdir(root_path)
-
-    # Django settings
-    sys.path.append(root_path)
-    os.environ['DJANGO_SETTINGS_MODULE'] = settings
-
-    django.setup()
-
-PROJECT_PATH = "/home/drfrink/Documents/devProjects/automate_data"
-PROJECT_SETTINGS = "automate.settings"
-
-__setup_django(PROJECT_PATH,PROJECT_SETTINGS)
-
-from poloniex_grabber.models import *
+from config import config
 
 def grab_ticker_data():
 	try:
@@ -29,7 +11,7 @@ def grab_ticker_data():
 		rows = r.json()
 		row_date = time.strftime("%Y/%m/%d-%H:%M:%S")
 		timestr = time.strftime("%Y%m%d")
-		with open(('/mnt/DataWhore/automate_data/poloniex_' + timestr),'a+') as datafile:
+		with open((config.data_storage + timestr),'a+') as datafile:
 			datawriter = csv.writer(datafile)
 			for data_coin_pair in rows:
 				datawriter.writerow([data_coin_pair,

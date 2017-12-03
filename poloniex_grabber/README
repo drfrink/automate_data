@@ -1,0 +1,7 @@
+ 
+create a config.py file and follow the below format,
+
+class config:
+
+	data_storage = '/mnt/DataWhore/automate_data/poloniex_'
+	project_path = "/home/drfrink/Documents/devProjects/automate_data"
