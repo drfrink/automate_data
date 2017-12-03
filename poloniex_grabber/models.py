@@ -13,5 +13,5 @@ class PoloniexCoinPairDataRaw(models.Model):
 	is_frozen = models.IntegerField()
 	high_24hr = models.DecimalField(max_digits=19, decimal_places=10)
 	low_24hr = models.DecimalField(max_digits=19, decimal_places=10)
-	created_at = models.DateTimeField(auto_now_add=True, db_index=True)
+	created_at = models.DateTimeField(db_index=True)
 
