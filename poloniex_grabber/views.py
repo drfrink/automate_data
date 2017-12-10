@@ -10,7 +10,7 @@ def grab_ticker_data():
 		r = requests.get('https://poloniex.com/public?command=returnTicker')
 		rows = r.json()
 		row_date = time.strftime("%Y/%m/%d-%H:%M:%S")
-		timestr = time.strftime("%Y%m%d")
+		timestr = time.strftime("%Y%m%d%H%M")
 		with open((config.data_storage + timestr),'a+') as datafile:
 			datawriter = csv.writer(datafile)
 			for data_coin_pair in rows:
